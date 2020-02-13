@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<script>
+	var i;
+	var Employee = [
+   {Name: "Astha",age: 21,sallery: "2000",dateofbirth:"02/10/1998"},
+   {Name: "xyz",age: 20,sallery: "7000",dateofbirth:"02/10/1998"},
+   {Name: "pqr",age: 22,sallery: "200",dateofbirth:"02/10/1998"},
+   {Name: "lmn",age: 30,sallery: "500",dateofbirth:"02/10/1998"},
+   {Name: "efg",age: 20,sallery: "8000",dateofbirth:"02/10/1998"},
+   
+];
+var salgreat=[];
+var j=0;
+	for(i=0;i<Employee.length;i++){
+
+		if(Employee[i].sallery>5000)
+		{
+			salgreat[j]=Employee[i];
+			j++;
+
+		}
+}
+
+console.log(salgreat);
+
+ var child=[];
+ var young=[];
+ var old=[];
+ var m=0,j=0,k=0;
+
+ for(var i=0;i<Employee.length;i++){
+ if(Employee[i].age>0 && Employee[i].age<=20){
+ 	child[m]=Employee[i];
+ 	m++;
+
+ }
+ else if(Employee[i].age>20 && Employee[i].age<=40){
+ 	young[j]=Employee[i];
+ 	j++;
+
+ }
+ else{
+ 	old[k]=Employee[i];
+ 	k++;
+ }
+}
+var group={"child":child,"young":young,"old":old};
+console.log(group);
+
+ 
+ 
+
+ var compare=[];
+ var l=0;
+ for(i=0;i<Employee.length;i++){
+ 	if(Employee[i].sallery<1000 && Employee[i].age>20){
+ 		Employee[i].sallery=Employee[i].sallery *5;
+ 		compare[l]=Employee[i];
+ 	}
+ }
+ console.log(compare);
+
+
+document.getElementById("demo").innerHTML =
+Employee[0].Name + " is " + Employee[0].sallery + " ";
+</script>
+
+</body>
+</html>

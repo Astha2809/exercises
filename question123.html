@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <head>
+    <meta charset="utf-8">
+        <title>Simple Interest</title>
+        <script>
+        function SimpleInterest()
+        {
+             var p,r,t;
+    p=parseFloat(prompt("Enter Principle Amount"));
+    r=parseFloat(prompt("Enter Rate Amount"));
+    t=parseFloat(prompt("Enter Time(year)"));
+    var si=(p*r*t)/100;
+    document.write("Simple Interest is: "+si);
+        }
+
+        function pallindrome()
+        {
+            var s;
+        s=prompt("Enter String");
+        var len=s.length;
+        var i;
+        for(i=0;i<len/2;i++){
+            if(s[i]!=s[len-i-1]){
+                var flag=0;
+
+            }
+        }
+            if(flag==0){
+        
+        
+            document.write("Not pallindrome");
+        }
+        else{
+            document.write("pallindrome");
+        }
+    }
+    
+    function Circlearea(){
+        var r;
+        r=parseFloat(prompt("Enter Radius"));
+        var a=(3.14*r*r);
+        document.write("Area of circle is: "+a);
+    }
+        
+    </script>
+    </head>
+    <body>
+    <center>
+        <input type="button" value="Calculate Simple Interest" onclick="SimpleInterest()" />
+        <input type="button" value="Check pallindrome" onclick="pallindrome()" />
+        <input type="button" value="calculate area" onclick="Circlearea()" />
+        </center>
+         
+    </body>
+
+    
+</html>
